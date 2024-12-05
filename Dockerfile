@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app/ .
 
-CMD ["python3", "-m", "flask_server"]
+CMD gunicorn app:app & python3 bot.py
